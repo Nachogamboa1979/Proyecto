@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "41b31224-50a8-46b9-b3bf-d0c8d3c399ab",
+		"name": "Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14920957"
+	},
+	"item": [
+		{
+			"name": "clientes/All",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "clientes/Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Jose Lema\",\r\n  \"genero\": \"Masculino\",\r\n  \"edad\": 23,\r\n  \"identificacion\": \"1234567890\",\r\n  \"direccion\": \"Otavalo sn y principal\",\r\n  \"telefono\": \"0982547851\",\r\n  \"clienteId\": \"ferpa\",\r\n  \"password\": \"1234\",\r\n  \"estado\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes/ById",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "clientes/AddList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n  \"nombre\": \"Marianela Montalvo\",\r\n  \"genero\": \"Femenino\",\r\n  \"edad\": 25,\r\n  \"identificacion\": \"1715201350\",\r\n  \"direccion\": \"Amazonas y NNUU\",\r\n  \"telefono\": \"097548965\",\r\n  \"clienteId\": \"MaMont\",\r\n  \"password\": \"5678\",\r\n  \"estado\": true\r\n},    \r\n{\r\n  \"nombre\": \"Juan Osorio\",\r\n  \"genero\": \"Masculino\",\r\n  \"edad\": 35,\r\n  \"identificacion\": \"2014521450\",\r\n  \"direccion\": \"13 junio y Equinoccial\",\r\n  \"telefono\": \"098874587\",\r\n  \"clienteId\": \"juoso\",\r\n  \"password\": \"1245\",\r\n  \"estado\": true\r\n},    \r\n{\r\n  \"nombre\": \"Ignacio Cando\",\r\n  \"genero\": \"Masculino\",\r\n  \"edad\": 46,\r\n  \"identificacion\": \"1308940442\",\r\n  \"direccion\": \"Don Bosco\",\r\n  \"telefono\": \"0982277477\",\r\n  \"clienteId\": \"igca\",\r\n  \"password\": \"1234\",\r\n  \"estado\": true\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes/bulk",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes/Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"nombre\": \"Jose Lema\",\r\n        \"genero\": \"Masculino\",\r\n        \"edad\": 40,\r\n        \"identificacion\": \"1234567890\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\",\r\n        \"clienteId\": \"jose123\",\r\n        \"password\": \"1234\",\r\n        \"estado\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes/Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/clientes/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cuentas/All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cuentas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cuentas/Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificacion\":\"1234567890\",\r\n    \"tipoCuenta\":\"Ahorro\",\r\n    \"numeroCuenta\":\"478758\",\r\n    \"saldoInicial\":2000,\r\n    \"estado\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cuentas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cuentas/AddList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[      \r\n    {\r\n    \"identificacion\":\"1715201350\",\r\n    \"tipoCuenta\":\"Corriente\",\r\n    \"numeroCuenta\":\"225487\",\r\n    \"saldoInicial\":100,\r\n    \"estado\":true\r\n},   \r\n{    \r\n    \"identificacion\":\"2014521450\",\r\n    \"tipoCuenta\":\"Ahorros\",\r\n    \"numeroCuenta\":\"495878\",\r\n    \"saldoInicial\":0,\r\n    \"estado\":true\r\n}, \r\n{\r\n    \"identificacion\":\"1715201350\",\r\n    \"tipoCuenta\":\"Ahorros\",\r\n    \"numeroCuenta\":\"496825\",\r\n    \"saldoInicial\":540,\r\n    \"estado\":true\r\n},   \r\n{\r\n    \"identificacion\":\"1234567890\",\r\n    \"tipoCuenta\":\"Corriente\",\r\n    \"numeroCuenta\":\"585545\",\r\n    \"saldoInicial\":1000,\r\n    \"estado\":true\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cuentas/bulk",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cuentas",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movimientos/registrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"numeroCuenta\":\"478758\",\r\n    \"tipoMovimiento\":\"Retiro\",\r\n    \"valor\":575\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/movimientos/registrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movimientos",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movimientos/registrarBulk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[    \r\n    {\r\n    \"numeroCuenta\":\"225487\",\r\n    \"tipoMovimiento\":\"Deposito\",\r\n    \"valor\":600\r\n    },\r\n    {\r\n    \"numeroCuenta\":\"495878\",\r\n    \"tipoMovimiento\":\"Deposito\",\r\n    \"valor\":150\r\n    },\r\n    {\r\n    \"numeroCuenta\":\"496825\",\r\n    \"tipoMovimiento\":\"Retiro\",\r\n    \"valor\":540\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reportes/estadoCuenta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/reportes?fechaDesde=2025/02/22&fechaHasta=2025/02/24&identificacion=1715201350",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reportes"
+					],
+					"query": [
+						{
+							"key": "fechaDesde",
+							"value": "2025/02/22"
+						},
+						{
+							"key": "fechaHasta",
+							"value": "2025/02/24"
+						},
+						{
+							"key": "identificacion",
+							"value": "1715201350"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
